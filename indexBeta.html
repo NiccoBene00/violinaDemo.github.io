@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" href="img/vback.png" style="width: 100%;">
+  <title>Viola Busi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="stylesite.css">
+
+</head>
+
+<body>
+
+  <!-- Sidebar with image -->
+  <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+    <div class="bgimg"></div>
+  </nav>
+
+  <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+  <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2"
+    id="mySidebar">
+    <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxlarge w3-display-topright"
+      style="padding:0 12px;">
+      <i class="fa fa-remove"></i>
+    </a>
+    <div class="w3-bar-block w3-center">
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i
+          class="fa fa-home w3-xxlarge"></i> Home</a>
+      <a href="#aboutme" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i
+          class="fa fa-user w3-xxlarge"></i> About me</a>
+      <a href="#photo" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i
+          class="fa fa-eye w3-xxlarge"></i> Photo</a>
+      <a href="#video" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i
+          class="fa fa-eye w3-xxlarge"></i> My works</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i
+          class="fa fa-envelope w3-xxlarge"></i> Contact</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="w3-main w3-padding-large" style="margin-left:40%">
+
+    <!-- Menu icon to open sidebar -->
+    <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;"
+      onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+    <!-- Header -->
+    <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+      <img src="img/logoBlack.png" style="width:50%; display: block; margin: 0 auto;">
+      <!--<h1 class="w3-jumbo"><b>Viola Busi</b></h1>-->
+      <!--<p>Contemporary dancer</p>-->
+
+      <button class="w3-button w3-light-grey w3-padding-large w3-margin-top" onclick="openVideo()">
+        <i class="fa fa-play"></i> Showreel presentation
+      </button>
+
+      <!-- Contenitore per il video -->
+      <div id="videoModal">
+        <span class="close-btn" onclick="closeVideo()">&times;</span>
+        <video controls>
+          <source src="video/Showreel improv and performance Viola Busi.mp4" type="video/mp4">
+          Your browser doesn't support tag video.
+        </video>
+      </div>
+
+      <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+        <i class="fa fa-download"></i> Download Resume
+      </button>
+
+    </header>
+
+    <!-- About Section -->
+    <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="aboutme">
+      <h2>About</h2>
+      <hr class="w3-opacity">
+      <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <h3 class="w3-padding-16">My Skills</h3>
+
+      <div class="container" id="skills-section">
+        <p class="w3-wide">Expressiveness</p>
+        <div class="progress-container">
+          <div class="progress-bar" data-percent="90">90%</div>
+        </div>
+        <p class="w3-wide">Technique</p>
+        <div class="progress-container">
+          <div class="progress-bar" data-percent="92">92%</div>
+        </div>
+        <p class="w3-wide">Musicality</p>
+        <div class="progress-container">
+          <div class="progress-bar" data-percent="97">97%</div>
+        </div>
+      </div>
+      <!--
+      <p class="w3-wide">Expressiveness</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width: 90%;" >90%</div>
+      </div>
+      <p class="w3-wide">Technique</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:95%">95%</div>
+      </div>
+      <p class="w3-wide">Musicality</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:97%">97%</div>
+      </div><br>-->
+
+      <br>
+
+      <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-section">
+        <div class="w3-quarter w3-section">
+          <span class="w3-xlarge">5</span><br>
+          Dancer companies
+        </div>
+        <div class="w3-quarter w3-section">
+          <span class="w3-xlarge">150+</span><br>
+          Live performance
+        </div>
+        <div class="w3-quarter w3-section">
+          <span class="w3-xlarge">15</span><br>
+          Schools visited
+        </div>
+        <div class="w3-quarter w3-section">
+          <span class="w3-xlarge">10+</span><br>
+          Years of experience
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <h3 class="w3-padding-24">My Reputation</h3>
+      <img src="img/rebe.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <p><span class="w3-large w3-margin-right">Rebecca Speroni</span>My partner</p>
+      <p>"No one is better than Violina"</p>
+      <!-- End About Section -->
+    </div>
+
+    <!-- Portfolio Section -->
+    <div class="w3-padding-32 w3-content" id="photo">
+      <h2 class="w3-text-grey">Photo</h2>
+      <hr class="w3-opacity">
+
+      <!-- Grid for photos -->
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half">
+          <div class="image-container">
+            <img src="img/vio1.jpg" alt="Immagine 1" style="width:100%">
+            <div class="caption">Crazy for my hair</div>
+          </div>
+          <div class="image-container">
+            <img src="img/vio2.jpg" alt="Immagine 1" style="width:100%">
+            <div class="caption">Crazy for my hair</div>
+          </div>
+          <div class="image-container">
+            <img src="img/vio3.jpg" alt="Immagine 1" style="width:100%">
+            <div class="caption">Crazy for my hair</div>
+          </div>
+          <div class="image-container">
+            <img src="img/vio4.jpg" alt="Immagine 1" style="width:100%">
+            <div class="caption">Crazy for my hair</div>
+          </div>
+          <div class="image-container">
+            <img src="img/vio5.jpg" alt="Immagine 1" style="width:100%">
+            <div class="caption">Crazy for my hair</div>
+          </div>
+          <div class="image-container">
+            <img src="img/vio8.jpg" alt="Immagine 1" style="width:100%">
+            <div class="caption">Crazy for my hair</div>
+          </div>
+        </div>
+
+        <div class="w3-half">
+          <div class="image-container">
+            <img src="img/vio10.jpg" alt="Immagine 1" style="width:100%">
+            <div class="caption">Crazy for my hair</div>
+          </div>
+          <div class="image-container">
+            <img src="img/vio11.jpg" alt="Immagine 1" style="width:100%">
+            <div class="caption">Crazy for my hair</div>
+          </div>
+          <div class="image-container">
+            <img src="img/vio12.jpg" alt="Immagine 1" style="width:100%">
+            <div class="caption">Crazy for my hair</div>
+          </div>
+          <div class="image-container">
+            <img src="img/vio13.jpg" alt="Immagine 1" style="width:100%">
+            <div class="caption">Crazy for my hair</div>
+          </div>
+          <div class="image-container">
+            <img src="img/vio14.jpg" alt="Immagine 1" style="width:100%">
+            <div class="caption">Crazy for my hair</div>
+          </div>
+          <div class="image-container">
+            <img src="img/vio15.jpg" alt="Immagine 1" style="width:100%">
+            <div class="caption">Crazy for my hair</div>
+          </div>
+          <div class="image-container">
+            <img src="img/vio9.jpg" alt="Immagine 1" style="width:100%">
+            <div class="caption">Crazy for my hair</div>
+          </div>
+        </div>
+        <!-- End photo grid -->
+      </div>
+
+    </div>
+
+    <div class="w3-padding-32 w3-content" id="video">
+      <h2 class="w3-text-grey">Some of my improvisation</h2>
+      <hr class="w3-opacity">
+
+      <!-- Grid for video -->
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half">
+          <div class="media-container">
+            <video src="video/impr1.mp4" controls style="width:100%"></video>
+            <p class="video-description">Some descriptionSome descriptionSome descriptionSome description
+              Some descriptionSome descriptionSome descriptionSome descriptionSome description
+            </p>
+          </div>
+          <div class="media-container">
+            <video src="video/impr2.mp4" controls style="width:100%"></video>
+            <p class="video-description">Some descriptionSome descriptionSome descriptionSome description
+              Some descriptionSome descriptionSome descriptionSome descriptionSome description
+            </p>
+          </div>
+
+        </div>
+
+        <div class="w3-half">
+          <div class="media-container">
+            <video src="video/impr3.mp4" controls style="width:100%"></video>
+            <p class="video-description">Some descriptionSome descriptionSome descriptionSome description
+              Some descriptionSome descriptionSome descriptionSome descriptionSome description
+            </p>
+          </div>
+          <div class="media-container">
+            <video src="video/impr4.mp4" controls style="width:100%"></video>
+            <p class="video-description">Some descriptionSome descriptionSome descriptionSome description
+              Some descriptionSome descriptionSome descriptionSome descriptionSome description
+            </p>
+          </div>
+          <div class="media-container">
+            <video src="video/impr5.mp4" controls style="width:100%"></video>
+            <p class="video-description">Some descriptionSome descriptionSome descriptionSome description
+              Some descriptionSome descriptionSome descriptionSome descriptionSome description
+            </p>
+          </div>
+        </div>
+
+        <!-- End video grid -->
+      </div>
+      <!-- End Portfolio Section -->
+    </div>
+
+    <div class="w3-padding-32 w3-content" id="video">
+      <h2 class="w3-text-grey">Some of my work</h2>
+      <hr class="w3-opacity">
+
+      <!-- Grid for photos -->
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half">
+          <div class="media-container">
+            <video src="video/videoWork1.mp4" controls style="width:100%"></video>
+            <p class="video-description">Some descriptionSome descriptionSome descriptionSome description
+              Some descriptionSome descriptionSome descriptionSome descriptionSome description
+            </p>
+          </div>
+          <div class="media-container">
+            <video src="video/videoWork2.mp4" controls style="width:100%"></video>
+            <p class="video-description">Some descriptionSome descriptionSome descriptionSome description
+              Some descriptionSome descriptionSome descriptionSome descriptionSome description
+            </p>
+          </div>
+        </div>
+
+        <div class="w3-half">
+          <div class="media-container">
+            <video src="video/videoWork3.mp4" controls style="width:100%"></video>
+            <p class="video-description">Some descriptionSome descriptionSome descriptionSome description
+              Some descriptionSome descriptionSome descriptionSome descriptionSome description
+            </p>
+          </div>
+          <div class="media-container">
+            <video src="video/videoWork4.mp4" controls style="width:100%"></video>
+            <p class="video-description">Some descriptionSome descriptionSome descriptionSome description
+              Some descriptionSome descriptionSome descriptionSome descriptionSome description
+            </p>
+          </div>
+
+
+        </div>
+        <!-- End photo grid -->
+      </div>
+      <!-- End Portfolio Section -->
+    </div>
+
+
+
+    <!-- Contact Section -->
+    <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+      <h2>Contact Me</h2>
+      <hr class="w3-opacity">
+
+      <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> The Hague, NL</p>
+        <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +33</p>
+        <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: viola.busi@hotmail.com</p>
+      </div>
+
+
+      <p>Lets get in touch. Send me a message:</p>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="email"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject">
+        </p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message">
+        </p>
+        <p>
+          <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </p>
+      </form>
+      <!-- End Contact Section -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+          class="w3-hover-text-green">niccolino</a></p>
+      <!-- End footer -->
+    </footer>
+
+    <!-- END PAGE CONTENT -->
+  </div>
+
+  <script>
+    // Open and close sidebar
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "60%";
+      document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+
+    // Funzione per aprire il video e bloccare lo scrolling
+    function openVideo() {
+      document.getElementById('videoModal').style.display = 'flex';
+      document.body.classList.add('modal-open');
+    }
+
+    // Funzione per chiudere il video e ripristinare lo scrolling
+    function closeVideo() {
+      document.getElementById('videoModal').style.display = 'none';
+      document.body.classList.remove('modal-open');
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const skillSection = document.getElementById("skills-section");
+      const progressBars = document.querySelectorAll(".progress-bar");
+
+      function animateBars() {
+        progressBars.forEach(bar => {
+          const percentage = bar.getAttribute("data-percent");
+          bar.style.width = percentage + "%";
+        });
+      }
+
+      function resetBars() {
+        progressBars.forEach(bar => {
+          bar.style.width = "0";
+        });
+      }
+
+      function checkIfInView() {
+        const sectionPos = skillSection.getBoundingClientRect();
+        const screenHeight = window.innerHeight;
+
+        // Controlla se la sezione è visibile nella finestra
+        if (sectionPos.top < screenHeight && sectionPos.bottom >= 0) {
+          animateBars();
+        } else {
+          resetBars();
+        }
+      }
+
+      window.addEventListener("scroll", checkIfInView);
+    });
+
+
+  </script>
+
+</body>
+
+</html>
