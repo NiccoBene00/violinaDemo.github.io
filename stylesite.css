@@ -16,7 +16,7 @@ h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('/img/fixedImg2.jpg');
+  background-image: url('img/fixedImg2.jpg');
   min-height: 100%;
 }
 
@@ -32,7 +32,7 @@ h6 {
   /* Ombra elegante */
   margin-bottom: 24px;
   /* Spazio tra i video */
-  transition: box-shadow 0.7s ease;
+  transition: box-shadow 0.3s ease;
   /* Transizione per l'ombreggiatura */
 }
 
@@ -167,6 +167,37 @@ body.modal-open {
   transition: width 3s ease;
 }
 
+/* Stile base per il bottone */
+.custom-button {
+  display: inline-block; /* Per comportarsi come un bottone */
+  position: absolute; /* Per posizionarlo in alto a destra */
+  top: 0; /* Allineato al bordo superiore */
+  right: 0; /* Allineato al bordo destro */
+  padding: 10px 15px; /* Spaziatura interna */
+  font-size: 24px; /* Dimensione del testo per .w3-xxlarge */
+  color: grey; /* Colore del testo (w3-text-grey) */
+  background-color: white; /* Sfondo bianco (w3-white) */
+  border: none; /* Rimuove il bordo */
+  cursor: pointer; /* Mostra il cursore puntatore */
+  z-index: 1; /* Assicura che sia sopra altri elementi */
+  transition: color 0.3s ease; /* Transizione per il colore del testo */
+  width: auto; /* Adatta la larghezza */
+}
+
+/* Stile hover per il bottone */
+.custom-button:hover {
+  color: black; /* Cambia il colore del testo al passaggio del mouse */
+}
+
+@media screen and (max-width: 500px) {
+  .w3-sidebar {
+    display: none !important; /* Nasconde la sidebar */
+  }
+  .custom-button {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .mobile-menu {
     display: flex;
@@ -182,10 +213,60 @@ body.modal-open {
     text-align: center;
     padding: 12px 0;
     font-size: 15px;
+    transition: box-shadow 0.2s ease-in-out;
   }
 
   .mobile-menu .w3-bar-item i {
     display: block; /* Mostra le icone su una riga separata */
     font-size: 15px;
+  }
+
+  .mobile-menu .w3-bar-item:active {
+    box-shadow: none;
+  }
+
+  .mobile-menu .w3-bar-item:focus {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.05); /* Aggiunge un leggero sfondo */
+  }
+
+}
+
+#home {
+  padding: 128px 16px;
+  text-align: center;
+  position: relative; /* Necessario per il layering */
+}
+
+
+/* Immagine di sfondo solo per dispositivi mobili */
+@media screen and (max-width: 650px) {
+  #home {
+    background-image: url('img/vio17_trasp.png'); /* Percorso dell'immagine */
+    background-size: cover; /* L'immagine riempie l'area */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat;
+    border: 5px solid #f1f1f1;
+    padding: 100px 16px; /* Riduci il padding su mobile */
+    color: white; /* Rendi il testo bianco per il contrasto */
+    box-sizing: border-box; /* Assicura che la cornice non influisca sulle dimensioni */
+
+  }
+
+  /* Logo */
+  #home .logo {
+    width: 70%; /* Ridimensiona il logo su dispositivi mobili */
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Pulsanti */
+  #home .w3-button {
+    background-color: rgba(255, 255, 255, 0.8); /* Sfondo semitrasparente */
+    color: black; /* Testo nero per contrasto */
+  }
+
+  #home .w3-button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Sfondo più visibile al passaggio del mouse */
   }
 }
