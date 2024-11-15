@@ -221,13 +221,10 @@ body.modal-open {
     font-size: 15px;
   }
 
-  .mobile-menu .w3-bar-item:active {
-    box-shadow: none;
-  }
-
-  .mobile-menu .w3-bar-item:focus {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    background-color: rgba(0, 0, 0, 0.05); /* Aggiunge un leggero sfondo */
+  @media (hover: none) and (pointer: coarse) {
+    .mobile-menu .w3-bar-item:hover {
+      background-color: inherit; /* Nessun colore di sfondo */
+    }
   }
 
 }
