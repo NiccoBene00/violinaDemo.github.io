@@ -170,7 +170,7 @@ body.modal-open {
 /* Stile base per il bottone */
 .custom-button {
   display: inline-block; /* Per comportarsi come un bottone */
-  position: absolute; /* Per posizionarlo in alto a destra */
+  position: fixed; /* Per posizionarlo in alto a destra */
   top: 0; /* Allineato al bordo superiore */
   right: 0; /* Allineato al bordo destro */
   padding: 10px 15px; /* Spaziatura interna */
