@@ -22,23 +22,23 @@
   </nav>
 
   <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-  <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2"
+  <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2;opacity: 0.95;"
     id="mySidebar">
     <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxlarge w3-display-topright"
       style="padding:0 12px;">
       <i class="fa fa-remove"></i>
     </a>
     <div class="w3-bar-block w3-center">
-      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i
-          class="fa fa-home w3-xxlarge"></i> Home</a>
-      <a href="#aboutme" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i
-          class="fa fa-user w3-xxlarge"></i> About me</a>
-      <a href="#photo" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i
-          class="fa fa-eye w3-xxlarge"></i> Photo</a>
-      <a href="#video" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i
-          class="fa fa-eye w3-xxlarge"></i> My works</a>
-      <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()"><i
-          class="fa fa-envelope w3-xxlarge"></i> Contact</a>
+      <a href="#home" class="w3-bar-item w3-button w3-text-grey w3-hover-black" style="font-size:30px" onclick="closeNav()"><i
+          class="fa fa-home w3-xlarge"></i> Home</a>
+      <a href="#aboutme" class="w3-bar-item w3-button w3-text-grey w3-hover-black" style="font-size:30px" onclick="closeNav()"><i
+          class="fa fa-user w3-xlarge"></i> About me</a>
+      <a href="#photo" class="w3-bar-item w3-button w3-text-grey w3-hover-black" style="font-size:30px" onclick="closeNav()"><i
+          class="fa fa-eye w3-xlarge"></i> Photo</a>
+      <a href="#video" class="w3-bar-item w3-button w3-text-grey w3-hover-black" style="font-size:30px" onclick="closeNav()"><i
+          class="fa fa-eye w3-xlarge"></i> My works</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" style="font-size:30px" onclick="closeNav()"><i
+          class="fa fa-envelope w3-xlarge"></i> Contact</a>
     </div>
   </nav>
 
@@ -431,6 +431,24 @@
       window.addEventListener("scroll", checkIfInView);
     });
 
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1); // Rimuove il #
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          const menuHeight = document.querySelector('.mobile-menu').offsetHeight;
+          const targetPosition = targetElement.offsetTop - menuHeight;
+
+          // Effettua lo scroll con un offset
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth',
+          });
+        }
+      });
+    });
 
   </script>
 
