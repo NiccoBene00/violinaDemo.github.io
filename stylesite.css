@@ -242,7 +242,7 @@ body.modal-open {
 /* Immagine di sfondo solo per dispositivi mobili */
 @media screen and (max-width: 650px) {
   #home {
-    background-image: url('img/vio17_trasp.png'); /* Percorso dell'immagine */
+    background-image: url('/img/vio17_trasp.png'); /* Percorso dell'immagine */
     background-size: cover; /* L'immagine riempie l'area */
     background-position: center; /* Centra l'immagine */
     background-repeat: no-repeat;
