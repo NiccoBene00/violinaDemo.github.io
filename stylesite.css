@@ -20,6 +20,49 @@ h6 {
   min-height: 100%;
 }
 
+.bgimg:hover {
+  opacity: 0.9; /* Riduce l'opacità al passaggio del mouse */
+}
+
+.desktop-menu-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 50px; /* Altezza della barra */
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.desktop-menu-bar a {
+  text-decoration: none;
+  color: grey;
+  padding: 10px 20px;
+  font-size: 18px;
+  transition: background 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.desktop-menu-bar a:hover {
+  background-color: grey;
+  color: white;
+}
+
+.desktop-menu-bar .fa {
+  margin-right: 8px;
+}
+
+/* Nascondere il menu desktop su dispositivi mobili */
+@media (max-width: 767px) {
+  .desktop-menu-bar {
+    display: none;
+  }
+}
 /* Stile per il contenitore del video e descrizione */
 .media-container {
   background-color: #fff;
