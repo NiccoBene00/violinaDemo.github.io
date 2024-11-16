@@ -232,14 +232,6 @@ body.modal-open {
   color: black; /* Cambia il colore del testo al passaggio del mouse */
 }
 
-@media screen and (max-width: 500px) {
-  .w3-sidebar {
-    display: none !important; /* Nasconde la sidebar */
-  }
-  .custom-button {
-    display: none !important;
-  }
-}
 
 @media screen and (max-width: 768px) {
   .mobile-menu {
