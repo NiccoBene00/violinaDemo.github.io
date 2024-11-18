@@ -57,6 +57,10 @@ h6 {
   margin-right: 8px;
 }
 
+.w3-hover-grey:active {
+  background-color: #ddd; /* Colore temporaneo durante il tocco */
+}
+
 /* Nascondere il menu desktop su dispositivi mobili */
 @media (max-width: 767px) {
   .desktop-menu-bar {
