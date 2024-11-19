@@ -465,26 +465,6 @@
         }
       });
     });
-
-    const menuItems = document.querySelectorAll('.mobile-menu .w3-hover-grey');
-
-    menuItems.forEach(item => {
-      // Aggiunge un listener per il touchstart per simulare hover
-      item.addEventListener('touchstart', () => {
-        item.classList.add('w3-grey'); // Simula il colore hover
-      });
-
-      // Aggiunge un listener per il touchend per rimuovere hover
-      item.addEventListener('touchend', () => {
-        item.classList.remove('w3-grey'); // Rimuove il colore hover
-      });
-
-      // Aggiunge un listener per il touchmove per garantire che hover sia rimosso
-      item.addEventListener('touchmove', () => {
-        item.classList.remove('w3-grey'); // Rimuove il colore se il dito si muove
-      });
-    });
-
   </script>
 
 </body>
