@@ -2,8 +2,11 @@
 
 > [!IMPORTANT]
 > <ins>Subjetc</ins>: VIOLA BUSI
+> 
 > <ins>Content</ins>: personal portfolio website
+> 
 > <ins>Instructions</ins>: open file *indexBeta.html* --> select view in raw mode --> on the search bar click on the address and subsitute *'githubusercontents.com'* with *'githack.com'*
+> 
 > <ins>Language</ins>: html, css, javascript
 
 > [!NOTE]
