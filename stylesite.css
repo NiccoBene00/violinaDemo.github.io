@@ -214,28 +214,6 @@ body.modal-open {
   transition: width 3s ease;
 }
 
-/* Stile base per il bottone */
-.custom-button {
-  display: inline-block; /* Per comportarsi come un bottone */
-  position: fixed; /* Per posizionarlo in alto a destra */
-  top: 0; /* Allineato al bordo superiore */
-  right: 0; /* Allineato al bordo destro */
-  padding: 10px 15px; /* Spaziatura interna */
-  font-size: 24px; /* Dimensione del testo per .w3-xxlarge */
-  color: grey; /* Colore del testo (w3-text-grey) */
-  background-color: white; /* Sfondo bianco (w3-white) */
-  border: none; /* Rimuove il bordo */
-  cursor: pointer; /* Mostra il cursore puntatore */
-  z-index: 1; /* Assicura che sia sopra altri elementi */
-  transition: color 0.3s ease; /* Transizione per il colore del testo */
-  width: auto; /* Adatta la larghezza */
-}
-
-/* Stile hover per il bottone */
-.custom-button:hover {
-  color: black; /* Cambia il colore del testo al passaggio del mouse */
-}
-
 
 @media screen and (max-width: 768px) {
   .mobile-menu {
